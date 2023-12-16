@@ -1,0 +1,16 @@
+
+.note {
+    height:fit-content;
+    background-color: var(--color-background--note);
+    padding: 2vh 0;
+    display:flex;
+    justify-content: center;
+
+    &--message {
+        display: flex;
+        width: 70%;
+        font-size: 28px;
+        color: var(--color-text);
+        text-align: center;
+    }
+}

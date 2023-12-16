@@ -1,0 +1,18 @@
+
+.main-page {
+    margin-top: 3vh;
+
+    &__container {
+
+        margin-top: 3vh;
+        &__search-panel {
+
+        }
+    
+        &__result-panel {
+            &__fields {
+                display: flex;
+            }
+        }
+    }
+}

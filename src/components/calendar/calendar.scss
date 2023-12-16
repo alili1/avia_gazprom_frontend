@@ -1,0 +1,24 @@
+
+.calendar {
+    margin-top: 25px;
+
+    &--name {
+        padding: 5px;
+        color: var(--color-text);
+        font-size: 24px;
+    }
+
+    &--picker {
+        padding: 5px;
+        margin-left: 5px;
+        background-color: var(--color-search);
+        color: var(--color-text);
+        font-size: 24px;
+        border: none !important;
+        border-bottom: 1px solid var(--color-text) !important;
+    }
+
+    &--picker:focus {
+        outline: none !important;
+    }
+}

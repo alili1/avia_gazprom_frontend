@@ -1,0 +1,29 @@
+
+.search {
+    margin-top: 25px;
+    &--name {
+        padding: 5px;
+        color: var(--color-text);
+        font-size: 24px;
+    }
+
+    &--field {
+
+        &-option {
+            font-size: 24px;
+            margin-left: 5px;
+            background-color: var(--color-search);
+            padding: 5px 10px;
+            border: none !important;
+            border-bottom: 1px solid var(--color-text) !important;
+        }
+
+        &-option:focus {
+            outline: none !important;
+        }
+
+        &-option:hover {
+            outline: none !important;
+        }
+    }
+}
