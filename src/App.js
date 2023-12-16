@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import * as React from 'react'
+import {useState} from "react";
+import {Route, Routes, Navigate, useNavigate, useLocation} from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import MainPage from './pages/MainPage';
+import { history } from './helpers/history';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+
+  history.navigate = useNavigate();
+  history.location = useLocation();
+  const [appState, setAppState] = useState({
+       loading: false,
+       repos: null,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+        <Route exact path="/" element={<MainLayout/>}>
+          <Route index element={<MainPage/>}/>
+        </Route> 
+        <Route path="*" element={<Navigate to="/"/>}/>
+    </Routes>
   );
 }
 
 export default App;
+
